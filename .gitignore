@@ -1,2 +1,7 @@
 /target
+/pkg
+/.idea
+/release
 /temp
+Cargo.lock
+*.env

@@ -1,7 +1,7 @@
 [workspace]
 
 members = [
-"game",
+"{{project-name}}",
 ]
 resolver = "2" # Important! wgpu/Bevy needs this!
 
@@ -29,18 +29,5 @@ lto = "fat"
 # Slows compile times, marginal improvements
 codegen-units = 1
 
-# [profile.wasm-release]
-# # Use release profile as default values
-# inherits = "release"
-#
-# # Optimize with size in mind, also try "s", sometimes it is better.
-# # This doesn't increase compilation times compared to -O3, great improvements
-# opt-level = "z"
-#
-# # Do a second optimization pass removing duplicate or unused code from dependencies.
-# # Slows compile times, marginal improvements
-# lto = "fat"
-#
-# # When building crates, optimize larger chunks at a time
-# # Slows compile times, marginal improvements
-# codegen-units = 1
+[profile.release]
+lto = "thin"
